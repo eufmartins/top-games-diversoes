@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Karaokê - TOP GAMES DIVERSÕES</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.png">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Cabeçalho -->
+        <header>
+            <div class="header-content">
+                <div class="logo-container">
+                    <img src="logo.png" alt="TOP GAMES DIVERSÕES" class="logo">
+                    <h1>TOP GAMES DIVERSÕES</h1>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/topgamesdiversoes/" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=5521970952836&text=Ol%C3%A1%2C+tenho+interesse+em+seus+produtos+%21%0APode+me+dar+mais+informa%C3%A7%C3%B5es%3F&type=phone_number&app_absent=0"
+                        target="_blank" class="social-link">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Digite o cantor, música ou trecho da letra..."
+                        autocomplete="off">
+                    <button id="searchButton"><i class="fas fa-search"></i> Buscar</button>
+                </div>
+                <div class="filter-container">
+                    <button id="showGenresBtn" class="genre-filter-btn">
+                        <i class="fas fa-filter"></i> Filtrar por Gênero
+                    </button>
+                    <div class="genres-checkbox-container" id="genresCheckboxContainer">
+                        <div class="genres-header">
+                            <h3>Selecione os Gêneros</h3>
+                        </div>
+                        <div class="genres-list" id="genresList"></div>
+                    </div>
+                </div>
+                <div class="suggestions" id="suggestions"></div>
+            </div>
+
+            <div class="content-container">
+                <table class="songs-table" id="songsTable">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Cantor</th>
+                            <th>Música</th>
+                            <th>Início da Letra</th>
+                            <th>Gênero</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsTableBody"></tbody>
+                </table>
+
+                <div class="pagination-controls">
+                    <button id="prevPageBtn" class="pagination-btn" disabled>
+                        <i class="fas fa-chevron-left"></i> Anterior
+                    </button>
+                    <span id="pageInfo">Página 1</span>
+                    <button id="nextPageBtn" class="pagination-btn">
+                        Próxima <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <div class="recommendations-container" id="recommendationsContainer"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
